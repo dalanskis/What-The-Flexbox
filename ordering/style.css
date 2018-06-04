@@ -34,13 +34,31 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 }
 
 .box {
-  flex:1;
+  flex:1; /* distributes equally */
 }
 
 .box3 {
-  order:1;
+  order:1; /* by default, everything is set to '0', if its set to anything greater than 0
+  it gets put at the end. So this is how it really is now from left to right now with 
+  order set to 1 on .box3: 0, 0, 0 (where the 3 used to be), and 1 aka .box3 now starts 
+  at the end (where 10 would be). */
 }
 
 .box5 {
-  order:2;
+  order:2; /* Now that .box5 is set to 2, you see it has moved next to 1 at the very end of the list.
+  .box3 has now moved inward [left].The caveat of 'order' is that your ordering will be switched if you're using this where
+  users will need to copy text. They may think theyre copying 1,2,3 but theyre really going to have
+  copied 3, 6, and 2. However, this isn't that big of a deal since you arent really using flexbox for
+  those items / elements anyways. This is useful because now you dont have to just deal with where 
+  flexbox puts your divs (esp in responsive), but you have more control of what order they're placed. */
+}
+
+.box7 {
+  order: -2; /* negatives work the same way in that using them will produce the element to move to the 
+  beginning of the list. So .box7 has been placed at position 1. */
+}
+
+.box8 {
+  order: -1; /*here you can see that the 1st left spot will be taken by the higher negative integer,
+  so .box7 has taken spot 1, whereas .box8 is in spot 2. */
 }

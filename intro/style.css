@@ -32,5 +32,10 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 .container {
   display:flex;
   border:10px solid goldenrod;
-  height:100vh;
+  min-height:100vh;
+  flex-direction: row; 
 }
+
+/* Display: flex; always needs to be placed on the parent container of your element. The div box is the 'flex item'. flex-direction: row (left to right) is default sidebyside for flexbox. It goes from the left to right Axis.
+The boxes are stacked vertically in flex-direction: column; meaning the axis starts at the top and ends at the bottom. 
+There is also the options of row-reverse and column-reverse, which are exactly as you'd expect. The axis is reversed for both. */

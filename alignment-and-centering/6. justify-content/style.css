@@ -9,7 +9,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* Some default styles to make each box visible */
 .box {
   color:white;
-  font-size: 50px;
+  font-size: 20px;
   text-align: center;
   text-shadow:4px 4px 0 rgba(0,0,0,0.1);
   padding:10px;
@@ -29,24 +29,31 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 
 /* We start writing out flexbox here. The above is just page setup */
+
+/*vertically centering flexbox items */
 .container {
-  display:flex; 
+  display:flex;
+  justify-content: space-evenly; /* space-evenly, space-around, space-between, center, flex-start and flex-end */
+  border:10px solid mistyrose;
+  flex-direction: column;
+  min-height:100vh;
+  /* flex start is default, starts your flex items to the left side of your
+  container. flex-end; will have your items move to the right side of the container.*/
 }
 
-.box {
-  flex:1; 
-  /* the width of your flex items by default are set to 'auto' which is the 
-  width of the content inside of the box. flex: 1, makes all items flex to the width
-  of the  width (with auto width) */
+/* .box {
+  width:33.333%;
 }
 
 .box2 {
-  flex:2; 
-  /* setting this to two says 'when there IS extra space, box 2 should have
-  double the amount of all the other ones, also this overrides what we previously 
-  set up above because...CSS */
+  padding-bottom: 200px;
 }
 
-.box5 {
-  flex: 3;
+.box6 {
+  padding-bottom: 0;
 }
+
+.box9 {
+  padding-bottom: 50px;
+  align-self:stretch;
+} */
