@@ -43,13 +43,25 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  
+  display: flex;
+}
+
+.flex-nav li {
+  flex: 3; /*this is saying we want those regular nav items to take up a third of the space each, and 
+  flex-nav .social buttons only take 1/3 of that AKA "you take three times the amount size of the sociaL 
+  */
+}
+
+.flex-nav .social {
+  flex: 1;
 }
 
 
 @media all and (max-width:1000px) {
+  .flex-nav ul {
+    flex-direction: column;
+  }
   
-
 }
 
 @media all and (max-width:500px) {
