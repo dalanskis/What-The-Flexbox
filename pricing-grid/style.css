@@ -54,9 +54,44 @@ a {
   margin: 10px 0;
 }
 
-
+/* Flex Container */
 .pricing-grid {
   max-width:750px;
   margin: 0 auto;
-  
+  display: flex;
+  align-items: center;  /*With this set, you get the variable sizes in height for the flex items. If undone, theyre all the same height despite content within.  */
 }
+
+/* Flex Item */
+.plan {
+  background: rgba(255, 255, 255, 0.2);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* All direct descendents of Plan are list items. The asterisk means all direct descendents.  */
+
+.plan > * {
+   flex: 1 1 100%; /*Written in shorthand. This is row, shrink, basis */
+}
+/* flex-basis: 100%; Without a width set in anyway, things look broken. We need to add flex basis to give a width to these flex items.  */
+
+.plan .cta {
+  align-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+

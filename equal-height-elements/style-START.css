@@ -33,4 +33,13 @@ a {
 }
 
 /* Flexbox Starts Here: */
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1 1 calc(33.33% - 20px); /* This calculates the budget we have within 100% including the 20px 
+  padding we added in .item */
+}
 
